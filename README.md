@@ -43,3 +43,20 @@ Set db settings:
 `docker run -v $(pwd):/meltano -w /meltano meltano/meltano config target-postgres set postgres_schema covid`
 Check everything is the way it should look:
 `docker run -v $(pwd):/meltano -w /meltano meltano/meltano config target-postgres`
+
+
+
+
+# now add the metlano production docker-compose  and dockerfiles.
+
+`docker run -v $(pwd):/meltano -w /meltano meltano/meltano add files docker-compose`
+
+`docker run -v $(pwd):/meltano -w /meltano meltano/meltano add files docker`
+
+Now run:
+
+docker-compose --env-file .env  up -d --build
+
+If you go to localhost:5000 you shall see the meltano ui has been built.
+
+We now need to spin up a postgres db for testing locally before we run an extraction.

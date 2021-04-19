@@ -16,7 +16,6 @@ plugins:
     - name: user_agent
     - name: start_date
     config:
-      api_token: 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
       start_date: '2021-04-01T00:00:00Z'
       user_agent: kirsty.bradley@wetransfer.com
     select:
@@ -24,13 +23,13 @@ plugins:
     metadata:
       eu_daily:
         replication-method: INCREMENTAL
-        replication-key:
-          git_path,: __sdc_row_number
+        replication-key: __sdc_row_number
   loaders:
   - name: target-postgres
     variant: datamill-co
     pip_url: singer-target-postgres
     config:
+      postgres_host: host.docker.internal
       postgres_username: admin
       postgres_database: dev
       postgres_schema: covid
