@@ -1,5 +1,5 @@
 # elt-meltano-dbt-airflow-example
-Example ELT pipeline using meltano, dbt, airflow, mysql db and metabase
+Example ELT pipeline using meltano, dbt, airflow, postgres db and metabase
 
 # covid-elt
 COVID-19 data via singer tap with Meltano, DBT and airflow.
